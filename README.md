@@ -68,6 +68,10 @@ OBS Studioを終了し、`bin`や`data`と同じ階層に`plugins`フォルダ�
 
 macOS / Linux 向けのビルドは GitHub Actions で生成しています。v1.0.0 では、GitHub Actions 上の Ubuntu 24.04 (Mesa の OpenGL) と macOS 15 (Apple Software Renderer の OpenGL) で影の描画を自動で検証しています。作者は macOS と Linux の実機を持たないため、実機の GPU と OBS Studio では動作を確認していません。macOS の OBS Studio 32 以降で選べる試験的な Metal 描画も確認していません。
 
+Ubuntu では、Releases の `simple-drop-shadow-<version>-x86_64-linux-gnu.deb` を `sudo apt install ./<ファイル名>` で導入します。この .deb は、OBS Studio の公式の PPA (`ppa:obsproject/obs-studio`) から apt で導入した OBS Studio を前提にしています。
+
+On Ubuntu, install `simple-drop-shadow-<version>-x86_64-linux-gnu.deb` from Releases with `sudo apt install ./<file name>`. The package expects OBS Studio installed with apt from the official PPA (`ppa:obsproject/obs-studio`).
+
 v0.1.2 以前は、OpenGL で影のシェーダーをコンパイルできず、macOS と Linux では影が描画されていなかった可能性があります。v1.0.0 で修正しました。
 
 ## Usage / 使い方
@@ -158,6 +162,10 @@ GPL-2.0 License
 AllegroMoltoV - https://www.allegromoltov.jp
 
 ## Changelog / 更新情報
+
+### v1.0.4 (2026-11-16)
+
+- 配信プラグイン倉庫くんに Linux も載せるよう、宣言ファイル (.soko-kun/config.json) の OS に Linux を足しました。GitHub Actions の Ubuntu 24.04 での描画の自動検証に通っています。README に Ubuntu での導入の手順を書きました。
 
 ### v1.0.3
 
